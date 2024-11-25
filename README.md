@@ -1,13 +1,13 @@
-# Welcome to CitrineOS
+# Welcome to Aviator
 
-CitrineOS is an open-source project aimed at providing a modular server runtime for managing Electric Vehicle (EV)
-charging infrastructure. This README will guide you through the process of installing and running CitrineOS.
+Aviator is an open-source project aimed at providing a modular server runtime for managing Electric Vehicle (EV)
+charging infrastructure. This README will guide you through the process of installing and running Aviator.
 
-This is the main part of CitrineOS containing the actual charging station management logic, OCPP message routing and all
+This is the main part of Aviator containing the actual charging station management logic, OCPP message routing and all
 modules.
 
 All other documentation and the issue tracking can be found in our main repository
-here: <https://github.com/citrineos/citrineos>.
+here: <https://github.com/hpxix/Aviator-Beta>.
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ here: <https://github.com/citrineos/citrineos>.
 
 ## Overview
 
-CitrineOS is developed in TypeScript and runs on `NodeJS` with [ws](https://github.com/websockets/ws)
+Aviator is developed in TypeScript and runs on `NodeJS` with [ws](https://github.com/websockets/ws)
 and [fastify](https://fastify.dev/).
 
 The system features:
@@ -44,7 +44,7 @@ The system features:
   - Currently supported brokers are `RabbitMQ` and Google Cloud `PubSub`
   - Currently supported caches are `In Memory` and `Redis`
 
-For more information on the project go to [citrineos.github.io](https://citrineos.github.io).
+For more information on the project go to [Aviator](https://github.com/hpxix/Aviator-Beta).
 
 ### Prerequisites
 
@@ -56,10 +56,10 @@ Before you begin, make sure you have the following installed on your system:
 
 ### Installation
 
-1. Clone the CitrineOS repository to your local machine:
+1. Clone the Aviator repository to your local machine:
 
    ```shell
-   git clone https://github.com/citrineos/citrineos-core
+   git clone https://github.com/hpxix/Aviator-Beta.git
    ```
 
 1. Install project dependencies from root dir:
@@ -84,7 +84,7 @@ Before you begin, make sure you have the following installed on your system:
 
 ### Starting the Server without Docker
 
-CitrineOS requires configuration to allow your OCPP 2.0.1 compliant charging stations to connect.
+Aviator requires configuration to allow your OCPP 2.0.1 compliant charging stations to connect.
 
 We recommend running and developing the project with the `docker-compose` set-up via the existing Run Configurations.
 Additional Run Configurations should be made for other IDEs (ex VSCode).
@@ -94,14 +94,14 @@ at `Server/src/config/envs/local.ts`. Make sure any changes to the local configu
 
 ## Starting the Server
 
-To start the CitrineOS server, run the following command:
+To start the Aviator server, run the following command:
 
 ```shell
 cd Server
 npm run start
 ```
 
-This will launch the CitrineOS server with the specified configuration. The debugger will be available
+This will launch the Aviator server with the specified configuration. The debugger will be available
 on port 9229.
 
 ### Attaching Debugger
@@ -177,7 +177,7 @@ Once Docker is running, the following services should be available:
 - **PostgreSQL** (service name: ocpp-db), PostgreSQL database for persistence
   - `5432`: sql tcp connection
 - **Directus** (service name: directus) on port 8055 with endpoints
-  - `:8055/admin`: web interface (login = admin@citrineos.com:CitrineOS!)
+  - `:8055/admin`: web interface contact me on email: altahan-hs@hotmail.com
 
 These three services are defined in `docker-compose.yml` and they
 live inside the docker network `docker_default` with their respective
@@ -189,7 +189,7 @@ localhost, you need to access `localhost:15672`.
 
 ## Generating OCPP Interfaces
 
-All CitrineOS interfaces for OCPP 2.0.1-defined schemas were procedurally generated using the script in
+All Aviator interfaces for OCPP 2.0.1-defined schemas were procedurally generated using the script in
 00_Base/json-schema-processor.js.
 It can be rerun:
 
@@ -201,8 +201,8 @@ This will replace all the files in `00_Base/src/ocpp/model/`,
 
 ## Contributing
 
-We welcome contributions from the community. If you would like to contribute to CitrineOS, please follow
-our [contribution guidelines](https://github.com/citrineos/citrineos/blob/main/CONTRIBUTING.md).
+We welcome contributions from the community. If you would like to contribute to Aviator, please follow
+our 
 
 ## Licensing
 
@@ -213,6 +213,4 @@ CitrineOS and its subprojects are licensed under the Apache License, Version 2.0
 If you have any questions or need assistance, feel free to reach out to us on our community forum or create an issue on
 the GitHub repository.
 
-## Roadmap
 
-[Roadmap](https://citrineos.github.io/docs/roadmap.html)
