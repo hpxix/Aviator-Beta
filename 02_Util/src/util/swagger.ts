@@ -104,7 +104,7 @@ const registerSwaggerUi = (
       filter: true,
     },
     theme: {
-      title: 'CitrineOS Central System API',
+      title: 'Aviator Central System API',
       css: [
         {
           filename: '',
@@ -203,7 +203,7 @@ const registerFastifySwagger = (
   server.register(fastifySwagger as any, {
     openapi: {
       info: {
-        title: 'CitrineOS Central System API',
+        title: 'Aviator Central System API',
         description: 'Central System API for OCPP 2.0.1 messaging.',
         version: packageJson.version,
       },
