@@ -71,6 +71,10 @@ export class CostNotifier extends Scheduler {
         transaction.stationId,
         transaction.id,
       );
+      await this._transactionEventRepository.updateTransactionTotalCostById(
+        cost,
+        transaction.id,
+      );
       await this._module.sendCall(
         transaction.stationId,
         tenantId,

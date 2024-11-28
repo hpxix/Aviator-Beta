@@ -65,6 +65,10 @@ export class Transaction extends Model implements TransactionType {
   @Column(DataType.INTEGER)
   declare remoteStartId?: number | null;
 
+  //Make a column and data type for totalCost declaration 
+  @Column(DataType.DECIMAL)
+  declare totalCost?: number;
+
   declare customData?: CustomDataType | null;
 
   static buildTransaction(
@@ -80,6 +84,7 @@ export class Transaction extends Model implements TransactionType {
     stoppedReason?: ReasonEnumType,
     remoteStartId?: number,
     customData?: CustomDataType,
+    totalCost?: number,
   ) {
     const transaction = new Transaction();
     transaction.id = id;
@@ -94,6 +99,8 @@ export class Transaction extends Model implements TransactionType {
     transaction.stoppedReason = stoppedReason;
     transaction.remoteStartId = remoteStartId;
     transaction.customData = customData;
+    transaction.totalCost = totalCost;
+
     return transaction;
   }
 }
